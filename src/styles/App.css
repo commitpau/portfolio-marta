@@ -1,0 +1,113 @@
+.App {
+    text-align: center;
+    margin: 20px;
+}
+
+.App-header {
+    background-color: #4CAF50;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 28px;
+    color: white;
+}
+
+/* Estilos movimiento header */
+#animated-header {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40vh;
+    /* Ocupa el 40% de la altura de la ventana */
+    background: linear-gradient(-60deg, #6c3 0%, #6c3 25%, #09f 25%, #09f 50%, #6c3 50%, #6c3 75%, #09f 75%, #09f 100%);
+    /* Para fijar el fondo en su posición */
+    z-index: 1;
+    /* Z-index positivo para estar encima del contenido */
+    animation: color-shift 1s ease-in-out infinite alternate;
+    /* Propiedades de la animación (1 segundo de duración, ease-in-out, infinita y alterna) */
+}
+
+@keyframes color-shift {
+    0% {
+        background: linear-gradient(-60deg, #6c3 0%, #6c3 25%, #09f 25%, #09f 50%, #6c3 50%, #6c3 75%, #09f 75%, #09f 100%);
+    }
+
+    100% {
+        background: linear-gradient(-60deg, #09f 0%, #09f 25%, #6c3 25%, #6c3 50%, #09f 50%, #09f 75%, #6c3 75%, #6c3 100%);
+    }
+}
+
+/* Estilos Generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos de las Secciones */
+.AboutMe,
+.Projects,
+.Contact {
+    background-color: #f5f5f5;
+    padding: 50px 20px;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.Portrait {
+    width: 280px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20%;
+    padding: 20px;
+}
+
+/* Estilos de los Proyectos */
+.Project {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Estilos del Texto */
+h2 {
+    color: #333;
+}
+
+h3 {
+    color: #4CAF50;
+}
+
+p {
+    color: #555;
+}
+
+li {
+    list-style: none;
+}
+
+/* Estilos para la Sección de Contacto */
+.Contact {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Estilos para el Contenedor del Retrato */
+.PortraitContainer {
+    flex: 1;
+    text-align: center;
+}
+
+/* Estilos para la Información de Contacto */
+.ContactInfo {
+    flex: 1;
+    text-align: left;
+    margin-left: 20px;
+}
