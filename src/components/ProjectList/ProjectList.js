@@ -16,7 +16,7 @@ const proyectos = [
       },
       {
         nombre: "Antiguedades Belmonte",
-        url: "https://github.com/MartaBelmonte/Personal-Project-Antiguedades-Belmonte"
+        url: "https://martabelmonte.github.io/Personal-Project-Antiguedades-Belmonte/"
       }
     ]
   },
