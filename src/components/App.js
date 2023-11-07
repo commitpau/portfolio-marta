@@ -11,7 +11,7 @@ function App() {
       <div className="App">
         <header className="App-header">
           <h1>Marta Belmonte</h1>
-          <h4>Full Stack Developer</h4>
+          <h4>Full-Stack Developer</h4>
         </header>
         <Routes>
           <Route path="/" element={<AboutMe />} />

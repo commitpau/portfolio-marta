@@ -4,7 +4,7 @@ import '../../styles/App.css';
 const proyectos = [
   {
     id: 1,
-    nombre: "Proyecto con React",
+    nombre: "Proyectos con React",
     urls: [
       {
         nombre: "The 90's developers",
@@ -13,12 +13,16 @@ const proyectos = [
       {
         nombre: "Encuentra las frases de Friends",
         url: "https://beta.adalab.es/modulo-3-evaluacion-intermedia-MartaBelmonte/"
+      },
+      {
+        nombre: "Antiguedades Belmonte",
+        url: "https://github.com/MartaBelmonte/Personal-Project-Antiguedades-Belmonte"
       }
     ]
   },
   {
     id: 2,
-    nombre: "Proyecto con JavaScript",
+    nombre: "Proyectos con JavaScript",
     urls: [
       {
         nombre: "Welcome to Disney",
