@@ -10,7 +10,8 @@ function App() {
     <Router>
       <div className="App">
         <header className="App-header">
-          <h1>Bienvenid@ a mi Portfolio</h1>
+          <h1>Marta Belmonte</h1>
+          <h4>Full Stack Developer</h4>
         </header>
         <Routes>
           <Route path="/" element={<AboutMe />} />

@@ -10,7 +10,8 @@ function Contact() {
         </div>
         <div className="ContactInfo">
           <h2>Contáctame</h2>
-          <p>Por linkedin</p>
+          <p>Linkedin</p>
+          <p>Github</p>
           <p>Correo electrónico: marta@martabelmonte.es</p>
         </div>
       </section>

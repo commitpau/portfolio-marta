@@ -67,29 +67,72 @@ body {
 
 /* Estilos de los Proyectos */
 .Project {
-    background-color: #ffffff;
+    background-color: #f7f7f7;
     padding: 20px;
     margin-top: 20px;
-    border-radius: 5px;
-    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    /* Agregar transición para suavizar los cambios */
 }
 
+.Project:hover {
+    transform: scale(1.05);
+    /* Escalar el proyecto en hover para dar efecto de elevación */
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.2);
+}
 
 /* Estilos del Texto */
 h2 {
     color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
 }
 
 h3 {
     color: #4CAF50;
+    font-size: 1.5em;
 }
 
-p {
-    color: #555;
+ul {
+    padding: 0;
 }
 
 li {
     list-style: none;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Animación de entrada para los proyectos */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.Project {
+    animation: fadeIn 0.5s ease forwards;
 }
 
 /* Estilos para la Sección de Contacto */
