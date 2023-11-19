@@ -16,7 +16,7 @@ const proyectos = [
       },
       {
         nombre: "Antiguedades Belmonte",
-        url: "https://martabelmonte.github.io/Personal-Project-Antiguedades-Belmonte/"
+        url: "https://project-antiguedades.vercel.app/"
       }
     ]
   },
@@ -41,6 +41,16 @@ const proyectos = [
       {
         nombre: "Anonymous Proxy",
         url: "https://beta.adalab.es/modulo-1-evaluacion-final-MartaBelmonte/"
+      }
+    ]
+  },
+  {
+    id: 3,
+    nombre: "Pequeños retos",
+    urls: [
+      {
+        nombre: "Escalera numérica",
+        url: "https://martabelmonte.github.io/Escalera/"
       }
     ]
   }
