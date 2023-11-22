@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../../styles/App.css';
 
 const proyectos = [
@@ -57,27 +57,51 @@ const proyectos = [
 ];
 
 function ProjectList() {
+  const [currentProjects, setCurrentProjects] = useState(Array(proyectos.length).fill(0));
+
   const handleProjectClick = (url) => {
     window.open(url, '_blank');
   };
 
+  const handleNextProject = (groupIndex) => {
+    setCurrentProjects((prevProjects) =>
+      prevProjects.map((prevProject, i) => (i === groupIndex ? (prevProject + 1) % proyectos[i].urls.length : prevProject))
+    );
+  };
+
+  const handlePrevProject = (groupIndex) => {
+    setCurrentProjects((prevProjects) =>
+      prevProjects.map((prevProject, i) => (i === groupIndex ? (prevProject - 1 + proyectos[i].urls.length) % proyectos[i].urls.length : prevProject))
+    );
+  };
+
   return (
-    <section className="Projects">
+    <section className="ProjectsContainer">
       <h2>Mis Proyectos</h2>
-      {proyectos.map((proyecto) => (
-        <div className="Project" key={proyecto.id}>
-          <h3>{proyecto.nombre}</h3>
-          <ul>
-            {proyecto.urls.map((enlace, urlIndex) => (
-              <li key={urlIndex}>
-                <button onClick={() => handleProjectClick(enlace.url)}>
-                  Ver {enlace.nombre}
+      <div className="Projects">
+        {proyectos.map((proyecto, groupIndex) => (
+          <div className={`ProjectGroup ${proyecto.nombre}`} key={groupIndex}>
+            <div className="ProjectGroupTitle">{proyecto.nombre}</div>
+            <div className="ProjectGroupContainer">
+              {proyecto.urls.length > 1 && (
+                <button className="arrow left" onClick={() => handlePrevProject(groupIndex)}>
+                  {'<'}
                 </button>
-              </li>
-            ))}
-          </ul>
-        </div>
-      ))}
+              )}
+              <div className="Project">
+                <button onClick={() => handleProjectClick(proyecto.urls[currentProjects[groupIndex]].url)}>
+                  {proyecto.urls[currentProjects[groupIndex]].nombre}
+                </button>
+              </div>
+              {proyecto.urls.length > 1 && (
+                <button className="arrow right" onClick={() => handleNextProject(groupIndex)}>
+                  {'>'}
+                </button>
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
     </section>
   );
 }

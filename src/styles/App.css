@@ -65,21 +65,108 @@ body {
     padding: 20px;
 }
 
+button.download-cv {
+    background-color: #f7b19c;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button.download-cv:hover {
+    transform: scale(1.2);
+
+}
+
 /* Estilos de los Proyectos */
-.Project {
-    background-color: #f7f7f7;
+.ProjectsContainer {
+    overflow-x: auto;
+}
+
+.Projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ProjectGroup {
+    margin-bottom: 20px;
+    overflow-x: auto;
+}
+
+.ProjectGroupTitle {
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    background: linear-gradient(45deg, #ffcc00, #ff6699);
+    /* Agregado un degradado */
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
+    /* Agregada sombra */
+}
+
+.ProjectGroupContainer {
+    display: flex;
+    gap: 20px;
     padding: 20px;
-    margin-top: 20px;
-    border-radius: 10px;
+    border-radius: 15px;
+}
+
+.Project {
+    flex: 0 0 calc(20% - 20px);
+    background-color: #f7b19c;
+    border: 2px solid #000;
+    padding: 30px;
+    border-radius: 15px;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
-    /* Agregar transición para suavizar los cambios */
+    cursor: pointer;
+    opacity: 0.5;
+    text-align: center;
 }
 
 .Project:hover {
-    transform: scale(1.05);
-    /* Escalar el proyecto en hover para dar efecto de elevación */
-    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.3);
+    animation: pulse 1s infinite;
+}
+
+.Project h3 {
+    color: #000;
+    /* Cambiado el color del texto a negro */
+    margin-bottom: 10px;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.Project button {
+    color: black;
+    border: 2px solid rgb(115, 115, 115);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.Project button:hover {
+    background-color: #ffd52c;
+    color: black;
+}
+
+.arrow {
+    background-color: transparent;
+    border: none;
+    font-size: 2em;
+    cursor: pointer;
+    color: #000;
+    /* Color de las flechas */
+    transition: transform 0.3s ease;
+    /* Añade transición para el cambio de tamaño */
+}
+
+.arrow:hover {
+    transform: scale(1.2);
+    /* Hace las flechas un poco más grandes al pasar el mouse sobre ellas */
 }
 
 /* Estilos del Texto */
@@ -105,17 +192,12 @@ li {
 }
 
 button {
-    background-color: #4CAF50;
-    color: white;
+    background-color: #f7b19c;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #45a049;
 }
 
 /* Animación de entrada para los proyectos */

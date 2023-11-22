@@ -16,7 +16,7 @@ function AboutMe() {
       <p>En este espacio, encontrarás una muestra de mi trabajo, desde proyectos tanto con CSS3, SASS, JavaScript, React.js y Vue.js como Node.js, SQL y Express. </p>
       <p>Espero que disfruten explorando mi trabajo tanto como yo disfruté creándolo. Cada proyecto está lleno de ilusión y dedicación, y estoy emocionada de compartirlos contigo.</p>
       
-      <button onClick={handleDownloadCV}>Descárgate mi CV</button>
+      <button className="download-cv" onClick={handleDownloadCV}>Descargar mi CV</button>
     </section>
   );
 }
