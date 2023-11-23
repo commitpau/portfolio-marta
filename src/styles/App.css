@@ -2,11 +2,19 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 .App {
     text-align: center;
 }
+
 
 /* Navegador */
 .Navigation {
@@ -24,6 +32,15 @@ body {
 
 .Navigation li {
     margin-right: 10px;
+    position: relative;
+    padding: 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.Navigation li:hover {
+    transform: scale(1.05);
 }
 
 .Navigation a {
@@ -31,6 +48,30 @@ body {
     color: white;
     font-size: 20px;
     font-weight: bold;
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .Navigation {
+        top: 20px;
+        /* Ajusta la posición hacia abajo */
+        right: 20px;
+        /* Ajusta la posición hacia la izquierda */
+    }
+
+    .Navigation ul {
+        flex-direction: row;
+    }
+
+    .Navigation li {
+        margin-right: 10px;
+        margin-bottom: 0;
+    }
 }
 
 /* Header */
@@ -61,15 +102,58 @@ body {
     margin: 0;
 }
 
+.SkillsContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.GridContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.SkillGroup {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+/* Añade estilos para organizar el contenido de AboutMe */
+.AboutMeText {
+    max-width: 800px;
+    /* Ajusta según tus preferencias */
+    margin: 0 auto;
+    /* Centra el contenido */
+}
+
+.AboutMeButtons {
+    display: flex;
+    flex-direction: column;
+    /* Alinea los botones en columna */
+    align-items: center;
+    /* Centra los botones horizontalmente */
+    margin-top: 20px;
+    /* Ajusta el margen superior según tus preferencias */
+}
+
 /* Estilos de las Secciones */
 .AboutMe,
 .Projects,
+.Skills
 .Contact {
     background-color: #f5f5f5;
     padding: 50px 20px;
     margin-bottom: 50px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.PortraitContainer {
+    flex: 1;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .Portrait {
@@ -93,94 +177,65 @@ button.download-cv:hover {
     transform: scale(1.2);
 }
 
-/* Estilos de los Proyectos */
-.ProjectsContainer {
-    overflow-x: auto;
-}
-
 .Projects {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /* Alinea los proyectos en el centro */
+    gap: 20px;
+    /* Espacio entre los proyectos */
 }
 
 .ProjectGroup {
-    margin-bottom: 20px;
-    overflow-x: auto;
+    margin-bottom: 40px;
+    /* Aumentado el margen inferior */
 }
 
 .ProjectGroupTitle {
     font-size: 1.8em;
     font-weight: bold;
     margin-bottom: 10px;
-    background: linear-gradient(45deg, #ffcc00, #ff6699);
-    /* Agregado un degradado */
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
-    /* Agregada sombra */
-}
-
-.ProjectGroupContainer {
-    display: flex;
-    gap: 20px;
-    padding: 20px;
-    border-radius: 15px;
+    color: #ff6699;
+    text-align: center;
 }
 
 .Project {
-    flex: 0 0 calc(20% - 20px);
-    background-color: #f7b19c;
-    border: 2px solid #000;
-    padding: 30px;
-    border-radius: 15px;
+    flex: 0 0 calc(30% - 20px);
+    background-color: #ffcc00;
+    border: 2px solid #ff6699;
+    padding: 20px;
+    border-radius: 10px;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     cursor: pointer;
-    opacity: 0.5;
+    opacity: 0.8;
     text-align: center;
 }
 
 .Project:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.3);
-    animation: pulse 1s infinite;
+    transform: scale(1.05);
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.2);
 }
 
 .Project h3 {
-    color: #000;
-    /* Cambiado el color del texto a negro */
+    color: #333;
     margin-bottom: 10px;
-    font-size: 1.8em;
+    font-size: 1.5em;
     font-weight: bold;
 }
 
 .Project button {
-    color: black;
-    border: 2px solid rgb(115, 115, 115);
-    transition: background-color 0.3s ease, color 0.3s ease;
+    color: white;
+    background-color: #ff6699;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .Project button:hover {
-    background-color: #ffd52c;
-    color: black;
-}
-
-.arrow {
-    background-color: transparent;
-    border: none;
-    font-size: 2em;
-    cursor: pointer;
-    color: #000;
-    /* Color de las flechas */
-    transition: transform 0.3s ease;
-    /* Añade transición para el cambio de tamaño */
-}
-
-.arrow:hover {
-    transform: scale(1.2);
-    /* Hace las flechas un poco más grandes al pasar el mouse sobre ellas */
+    background-color: #ff3366;
 }
 
 /* Estilos del Texto */
@@ -245,16 +300,39 @@ button {
 }
 
 /* Estilos para la Información de Contacto */
+.ContactInfo {
+    flex: 1;
+    margin-bottom: 90px;
+}
+
+.ContactInfo h2 {
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.ContactInfo p {
+    margin: 0;
+    color: #333;
+    font-size: 1.2em;
+}
+
 .ContactInfo a {
     color: #333;
     text-decoration: none;
     transition: color 0.3s ease;
+    display: block;
+    margin-bottom: 5px;
 }
 
-.fa-linkedin-in {
+.ContactInfo a:hover {
     color: #0077B5;
 }
 
+.fa-linkedin-in,
 .fa-github {
     color: #333;
+    font-size: 1.5em;
+    margin-right: 5px;
+    /* Añadido espacio entre íconos */
 }

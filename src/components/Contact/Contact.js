@@ -12,7 +12,7 @@ function Contact() {
         <img className="Portrait" src={MartaImage} alt="Marta's Portrait" />
       </div>
       <div className="ContactInfo">
-        <h2>Contáctame</h2>
+        <h2>Información de contacto</h2>
         <p>
           <a href={linkedinURL} target="_blank" rel="noopener noreferrer">
             <i className="fa-brands fa-linkedin-in fa-beat"></i> LinkedIn

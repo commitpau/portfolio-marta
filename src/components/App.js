@@ -4,13 +4,15 @@ import '../styles/App.css';
 import ProjectList from '../components/ProjectList/ProjectList';
 import Contact from '../components/Contact/Contact';
 import AboutMe from '../components/AboutMe/AboutMe';
-import MartaImage from '../Images/MartaImage.png';
+import Skills from '../components/Skills/Skills';
+
 
 function Navigation() {
   return (
     <nav className="Navigation">
       <ul>
         <li><Link to="/">About Me</Link></li>
+        <li><Link to="/skills">Skills</Link></li>
         <li><Link to="/projects">Projects</Link></li>
         <li><Link to="/contact">Contact</Link></li>
       </ul>
@@ -30,7 +32,8 @@ function App() {
           <Navigation />
         </header>
         <Routes>
-            <Route path="/" element={<React.Fragment><AboutMe /><ProjectList /><Contact /></React.Fragment>} />
+            <Route path="/" element={<React.Fragment><AboutMe /><Skills /><ProjectList /><Contact /></React.Fragment>} />
+            <Route path="/skills" element={<Skills />} />
             <Route path="/projects" element={<ProjectList />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>

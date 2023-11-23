@@ -44,35 +44,11 @@ const proyectos = [
       }
     ]
   },
-  {
-    id: 3,
-    nombre: "Pequeños retos",
-    urls: [
-      {
-        nombre: "Escalera numérica",
-        url: "https://martabelmonte.github.io/Escalera/"
-      }
-    ]
-  }
 ];
 
 function ProjectList() {
-  const [currentProjects, setCurrentProjects] = useState(Array(proyectos.length).fill(0));
-
   const handleProjectClick = (url) => {
     window.open(url, '_blank');
-  };
-
-  const handleNextProject = (groupIndex) => {
-    setCurrentProjects((prevProjects) =>
-      prevProjects.map((prevProject, i) => (i === groupIndex ? (prevProject + 1) % proyectos[i].urls.length : prevProject))
-    );
-  };
-
-  const handlePrevProject = (groupIndex) => {
-    setCurrentProjects((prevProjects) =>
-      prevProjects.map((prevProject, i) => (i === groupIndex ? (prevProject - 1 + proyectos[i].urls.length) % proyectos[i].urls.length : prevProject))
-    );
   };
 
   return (
@@ -83,21 +59,13 @@ function ProjectList() {
           <div className={`ProjectGroup ${proyecto.nombre}`} key={groupIndex}>
             <div className="ProjectGroupTitle">{proyecto.nombre}</div>
             <div className="ProjectGroupContainer">
-              {proyecto.urls.length > 1 && (
-                <button className="arrow left" onClick={() => handlePrevProject(groupIndex)}>
-                  {'<'}
-                </button>
-              )}
-              <div className="Project">
-                <button onClick={() => handleProjectClick(proyecto.urls[currentProjects[groupIndex]].url)}>
-                  {proyecto.urls[currentProjects[groupIndex]].nombre}
-                </button>
-              </div>
-              {proyecto.urls.length > 1 && (
-                <button className="arrow right" onClick={() => handleNextProject(groupIndex)}>
-                  {'>'}
-                </button>
-              )}
+              {proyecto.urls.map((urlInfo, projectIndex) => (
+                <div className="Project" key={projectIndex}>
+                  <button onClick={() => handleProjectClick(urlInfo.url)}>
+                    {urlInfo.nombre}
+                  </button>
+                </div>
+              ))}
             </div>
           </div>
         ))}

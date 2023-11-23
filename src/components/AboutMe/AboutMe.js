@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import cvPDF from '../../Images/Marta_Belmonte_CV.pdf';
 
 function AboutMe() {
+  const [showPdf, setShowPdf] = useState(false);
+
   const handleDownloadCV = () => {
     const link = document.createElement('a');
     link.href = cvPDF;
@@ -9,21 +11,49 @@ function AboutMe() {
     link.click();
   };
 
+  const handleShowPdf = () => {
+    setShowPdf(true);
+  };
+
+  const handleClosePdf = () => {
+    setShowPdf(false);
+  };
+
   return (
     <section className="AboutMe">
       <h2>Me presento</h2>
-      <p>¡Hola! Soy Marta, una apasionada programadora web con experiencia en tecnologías orientadas tanto en Frontend como en Backend. Me encanta crear experiencias digitales cautivadoras y funcionales. Siempre estoy buscando desafíos emocionantes para ampliar mis habilidades y contribuir a proyectos innovadores. ¡Espero poder colaborar contigo pronto!</p>
-      <p>En este espacio, encontrarás una muestra de mi trabajo, desde proyectos tanto con CSS3, SASS, JavaScript, React.js y Vue.js como Node.js, SQL y Express. </p>
-      <p>Espero que disfruten explorando mi trabajo tanto como yo disfruté creándolo. Cada proyecto está lleno de ilusión y dedicación, y estoy emocionada de compartirlos contigo.</p>
-      
-      <button className="download-cv" onClick={handleDownloadCV}>
-        Descargar mi CV
-      </button>
+      <div className="AboutMeContent">
+        <div className="AboutMeText">
+          <p>¡Hola! Soy Marta, apasionada programadora web full-stack. Amo crear experiencias digitales cautivadoras y siempre estoy en busca de nuevos retos para ampliar mis habilidades. ¡Disfruten explorando mi trabajo tanto como yo disfruté creándolo! 😊💻</p>
+        </div>
+        <div className="AboutMeButtons">
+          <button className="download-cv" onClick={handleDownloadCV}>
+            Descargar mi CV
+          </button>
+          <div style={{ marginTop: '10px' }}>
+            <button className="show-pdf" onClick={handleShowPdf}>
+              Ver mi CV
+            </button>
+          </div>
+        </div>
+      </div>
+      {showPdf && (
+        <div className="pdf-viewer">
+          <button className="close-pdf" onClick={handleClosePdf}>
+            Cerrar
+          </button>
+          <iframe title="Marta_Belmonte_CV" src={cvPDF} width="100%" height="500px"></iframe>
+        </div>
+      )}
     </section>
   );
 }
 
 export default AboutMe;
+
+
+
+
 
 
 
