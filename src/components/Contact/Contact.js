@@ -23,7 +23,6 @@ function Contact() {
             <i className="fa-brands fa-github fa-beat"></i> GitHub
           </a>
         </p>
-        <p>marta@martabelmonte.es</p>
       </div>
     </section>
   );
