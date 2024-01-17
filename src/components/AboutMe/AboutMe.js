@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import cvPDF from '../../Images/Marta_Belmonte_CV.pdf';
+import cvPDF from '../../Images/CV_Marta_Belmonte.pdf';
 
 function AboutMe() {
   const [showPdf, setShowPdf] = useState(false);
