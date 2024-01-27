@@ -22,7 +22,7 @@ body {
     z-index: 1;
     color: white;
     font-size: 25px;
-    background: url('../Images/fondo.avif') center center/cover;
+    background: rgb(49, 49, 49);
 }
 
 .Navigation {
@@ -73,10 +73,6 @@ body {
         text-align: center;
     }
 
-    .SkillsContainer {
-        padding: 10px;
-    }
-
     .GridContainer {
         gap: 10px;
         display: flex;
@@ -87,8 +83,7 @@ body {
 
     .AboutMe,
     .Projects,
-    .Skills,
-    .Contact {
+    .Skills {
         padding: 10px;
         margin-bottom: 10px;
     }
@@ -156,38 +151,97 @@ body {
 
 /* Estilos para escritorio */
 @media screen and (min-width: 768px) {
+    .menu-toggle {
+        display: none;
+        /* Oculta la hamburguesa en pantallas más grandes */
+    }
+
+    .Navigation {
+        display: flex;
+        /* Muestra la navegación extendida en pantallas más grandes */
+    }
+
     .GridContainer {
-            gap: 10px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            /* Centra los elementos en dispositivos de escritorio */
-        }
-    
-        .SkillGroup {
-            width: calc(30% - 20px);
-            /* Habilidades en fila en dispositivos de escritorio */
-            border: 2px solid #ddd;
-            /* Borde más ancho en la versión de escritorio */
-            border-radius: 8px;
-            /* Bordes más redondeados */
-            padding: 15px;
-            /* Aumenta el espacio interno */
-            box-sizing: border-box;
-        }
+        gap: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .SkillsContainer {
+        padding: 40px;
+    }
+
+    .SkillGroup {
+        width: calc(50% - 20px);
+        margin-right: 20px;
+        border: 2px solid #ddd;
+        border-radius: 8px;
+        box-sizing: border-box;
+        padding: 2rem;
+            margin: 0 auto;
+            text-align: center;
+            max-width: 500px;
+    }
+
+    .SkillGroup:nth-child(odd) {
+        margin-right: 0;
+    }
 }
 
-.Project {
-    flex: 0 0 calc(30% - 20px);
-    background-color: #ffcc00;
-    border: 2px solid #ff6699;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-    cursor: pointer;
-    opacity: 0.8;
+
+/* estilos About me*/
+.AboutMe {
     text-align: center;
+}
+
+.AboutMeText {
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.AboutMeButtons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.download-cv,
+.show-pdf {
+    margin-right: 10px;
+}
+
+
+.Project {
+    display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        /* Para permitir que los elementos se ajusten en una fila */
+        margin-bottom: 10px;
+        background-color: #ffcc00;
+        border: 2px solid #ff6699;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        cursor: pointer;
+        opacity: 0.8;
+        text-align: center;
+}
+
+.Project img {
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.ProjectsContainer {
+    padding: 2rem;
+    margin: 0 auto;
+    text-align: center;
+    max-width: 900px;
 }
 
 .Project:hover {
@@ -211,6 +265,10 @@ body {
 
 .Project button:hover {
     background-color: #ff3366;
+}
+
+.miniatura-pequenita {
+    width: 200px;
 }
 
 /* Estilos del Texto */
@@ -257,39 +315,55 @@ button {
     }
 }
 
-.Project {
-    animation: fadeIn 0.5s ease forwards;
-}
-
-/* Estilos para la Sección de Contacto */
-.Contact {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
 
 /* Estilos para el Contenedor del Retrato */
 .PortraitContainer {
-    flex: 1;
-    text-align: center;
+border-radius: 50%;
+    overflow: hidden;
+    width: 400px;
+    /* Ajusta el tamaño según sea necesario */
+    height: 420px;
+    /* Ajusta el tamaño según sea necesario */
+    margin-right: 20px;
+    /* Espaciado entre la imagen y los enlaces */
 }
 
 /* Estilos para la Información de Contacto */
-.ContactInfo {
-    flex: 1;
-    margin-bottom: 90px;
+.Contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
-.ContactInfo h2 {
-    color: #333;
-    font-size: 2em;
+.ContactTitle {
     margin-bottom: 20px;
 }
 
-.ContactInfo p {
-    margin: 0;
+.ContactTitle h2 {
     color: #333;
-    font-size: 1.2em;
+    font-size: 2em;
+}
+
+.ContactContent {
+    display: flex;
+    align-items: center;
+    /* Alinea los elementos verticalmente */
+}
+
+.PortraitContainer {
+    margin-right: 180px;
+    /* Ajusta el margen derecho entre la foto y los enlaces */
+}
+
+.ContactInfo {
+    text-align: left;
+}
+
+.ContactInfo p {
+    margin: 20px;
+    color: #333;
+    font-size: 1.4em;
 }
 
 .ContactInfo a {
@@ -297,7 +371,6 @@ button {
     text-decoration: none;
     transition: color 0.3s ease;
     display: block;
-    margin-bottom: 5px;
 }
 
 .ContactInfo a:hover {
@@ -306,8 +379,6 @@ button {
 
 .fa-linkedin-in,
 .fa-github {
-    color: #333;
-    font-size: 1.5em;
-    margin-right: 5px;
-    /* Añadido espacio entre íconos */
+    color: #333333;
+    margin-right: 20px;
 }

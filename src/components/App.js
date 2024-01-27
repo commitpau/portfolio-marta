@@ -11,10 +11,10 @@ function Navigation({ isActive }) {
   return (
     <nav className={`Navigation ${isActive ? 'active' : ''}`}>
       <ul>
-        <li><Link to="/">About Me</Link></li>
-        <li><Link to="/skills">Skills</Link></li>
-        <li><Link to="/projects">Projects</Link></li>
-        <li><Link to="/contact">Contact</Link></li>
+        <li><Link to="/">Me presento</Link></li>
+        <li><Link to="/skills">Habilidades</Link></li>
+        <li><Link to="/projects">Mis proyectos</Link></li>
+        <li><Link to="/contact">Contacto</Link></li>
       </ul>
     </nav>
   );
