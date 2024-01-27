@@ -108,9 +108,15 @@ body {
     }
 
     .Portrait {
-        width: 100%;
-        height: auto;
-        border-radius: 0;
+        width: 70%;
+        /* Reducir el ancho de la foto al 70% */
+    }
+
+    .PortraitContainer {
+        margin-right: 10px;
+        /* Reducir el margen entre la foto y los enlaces */
+        margin-bottom: 20px;
+        /* Agregar espacio entre la foto y los enlaces */
     }
 
     .Navigation {
@@ -137,6 +143,8 @@ body {
     .Navigation a {
         font-size: 16px;
         color: white;
+        text-decoration: none;
+        /* Elimina el subrayado */
     }
 
     .menu-toggle {
@@ -179,9 +187,9 @@ body {
         border-radius: 8px;
         box-sizing: border-box;
         padding: 2rem;
-            margin: 0 auto;
-            text-align: center;
-            max-width: 500px;
+        margin: 0 auto;
+        text-align: center;
+        max-width: 500px;
     }
 
     .SkillGroup:nth-child(odd) {
@@ -215,20 +223,20 @@ body {
 
 .Project {
     display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-        /* Para permitir que los elementos se ajusten en una fila */
-        margin-bottom: 10px;
-        background-color: #ffcc00;
-        border: 2px solid #ff6699;
-        padding: 15px;
-        border-radius: 10px;
-        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
-        transition: all 0.3s ease;
-        cursor: pointer;
-        opacity: 0.8;
-        text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    /* Para permitir que los elementos se ajusten en una fila */
+    margin-bottom: 10px;
+    background-color: #ffcc00;
+    border: 2px solid #ff6699;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    opacity: 0.8;
+    text-align: center;
 }
 
 .Project img {
@@ -318,7 +326,7 @@ button {
 
 /* Estilos para el Contenedor del Retrato */
 .PortraitContainer {
-border-radius: 50%;
+    border-radius: 50%;
     overflow: hidden;
     width: 400px;
     /* Ajusta el tamaño según sea necesario */
@@ -381,4 +389,146 @@ border-radius: 50%;
 .fa-github {
     color: #333333;
     margin-right: 20px;
+}
+
+/* Modificaciones para dispositivos móviles */
+@media screen and (max-width: 767px) {
+    .container {
+        padding: 10px;
+    }
+
+    .App-header {
+        height: 150px;
+        font-size: 16px;
+    }
+
+    .header-left {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .GridContainer {
+        gap: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        /* Centra los elementos en dispositivos móviles */
+    }
+
+    .AboutMe,
+    .Projects,
+    .Skills {
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    .SkillGroup {
+        border: 1px solid #ddd;
+        /* Borde gris suave alrededor de cada habilidad */
+        border-radius: 5px;
+        margin-bottom: 10px;
+        padding: 10px;
+        width: calc(100% - 20px);
+        /* Habilidades en columna en dispositivos móviles */
+        box-sizing: border-box;
+    }
+
+    .Project {
+        flex: 0 0 calc(100% - 20px);
+    }
+
+    .ProjectGroupTitle {
+        font-size: 1.5em;
+    }
+
+    .Portrait {
+        width: 50%;
+        /* Reducir el ancho de la foto al 50% */
+    }
+
+    .PortraitContainer {
+        margin-right: 10px;
+        /* Reducir el margen entre la foto y los enlaces */
+        margin-bottom: 20px;
+        /* Agregar espacio entre la foto y los enlaces */
+    }
+
+    .Navigation {
+        flex-direction: column;
+        align-items: flex-end;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: rgba(0, 0, 0, 0.8);
+        border-radius: 10px;
+        padding: 10px;
+        display: none;
+    }
+
+    .Navigation.active {
+        display: flex;
+    }
+
+    .Navigation li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .Navigation a {
+        font-size: 16px;
+        color: white;
+        text-decoration: none;
+        /* Elimina el subrayado */
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        color: white;
+        font-size: 20px;
+        background: none;
+        border: none;
+    }
+
+    /* Modificaciones para la información de contacto */
+    .ContactTitle h2 {
+        font-size: 1.5em;
+        /* Tamaño de título reducido */
+    }
+
+    .ContactContent {
+        flex-direction: column;
+        /* Alinea elementos de contacto en columna */
+        text-align: center;
+        /* Alinea texto al centro */
+    }
+
+    .ContactInfo p {
+        margin: 10px 0;
+        /* Reduce el espacio entre párrafos */
+        font-size: 1em;
+        /* Tamaño de fuente reducido */
+    }
+
+    .ContactInfo a {
+        font-size: 0.9em;
+        /* Tamaño de fuente reducido */
+        color: #333;
+        /* Color del texto del enlace */
+        transition: color 0.3s ease;
+        /* Agrega transición al color */
+    }
+
+    .ContactInfo a:hover {
+        color: #0077B5;
+        /* Cambia el color al hacer hover */
+    }
+
+    .fa-linkedin-in,
+    .fa-github {
+        font-size: 1.2em;
+        /* Tamaño de iconos ajustado */
+        margin-right: 10px;
+        /* Espacio entre iconos reducido */
+    }
 }
