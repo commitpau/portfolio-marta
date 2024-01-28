@@ -441,16 +441,8 @@ button {
         font-size: 1.5em;
     }
 
-    .Portrait {
-        width: 50%;
-        /* Reducir el ancho de la foto al 50% */
-    }
-
     .PortraitContainer {
-        margin-right: 10px;
-        /* Reducir el margen entre la foto y los enlaces */
-        margin-bottom: 20px;
-        /* Agregar espacio entre la foto y los enlaces */
+        margin-bottom: -50px;   
     }
 
     .Navigation {
@@ -489,6 +481,7 @@ button {
         background: none;
         border: none;
     }
+       }
 
     /* Modificaciones para la información de contacto */
     .ContactTitle h2 {
@@ -531,4 +524,3 @@ button {
         margin-right: 10px;
         /* Espacio entre iconos reducido */
     }
-}
