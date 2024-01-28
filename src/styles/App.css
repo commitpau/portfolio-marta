@@ -442,7 +442,10 @@ button {
     }
 
     .PortraitContainer {
-        margin-bottom: -50px;   
+        display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-right: 5px;
     }
 
     .Navigation {
@@ -481,7 +484,6 @@ button {
         background: none;
         border: none;
     }
-       }
 
     /* Modificaciones para la información de contacto */
     .ContactTitle h2 {
@@ -524,3 +526,4 @@ button {
         margin-right: 10px;
         /* Espacio entre iconos reducido */
     }
+}
