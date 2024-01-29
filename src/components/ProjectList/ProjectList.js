@@ -71,7 +71,7 @@ function ProjectList() {
       <div className="Projects">
         {proyectos.map((grupo, index) => (
           <div className="ProjectGroup" key={index}>
-            <h3>{grupo.nombre}</h3>
+            <h3 className="ProjectName">{grupo.nombre}</h3>
             <div className="ProjectGroupContainer">
               {grupo.urls.map((proyecto, proyectoIndex) => (
                 <div className="Project" key={proyectoIndex}>

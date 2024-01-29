@@ -185,6 +185,14 @@ body {
     .SkillGroup:nth-child(odd) {
         margin-right: 0;
     }
+
+        .ProjectName {
+            color: #4CAF50;
+            font-size: 1.5em;
+            text-align: center;
+        }
+
+
 }
 
 
@@ -272,6 +280,7 @@ h2 {
 h3 {
     color: #4CAF50;
     font-size: 1.5em;
+    text-align: center;
 }
 
 ul {
@@ -377,7 +386,7 @@ button {
     margin-right: 20px;
 }
 
-/* Modificaciones para dispositivos móviles */
+/* Estilos para dispositivos móviles */
 @media screen and (max-width: 767px) {
     .container {
         padding: 10px;
@@ -427,34 +436,21 @@ button {
         font-size: 1.5em;
     }
 
-    .PortraitContainer {
-        display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-right: 5px;
+    .Portrait {
+        width: 70%;
+        /* Reducir el ancho de la foto al 70% */
     }
 
-        .Navigation {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background: rgba(0, 0, 0, 0.8);
-            border-radius: 10px;
-            padding: 10px;
-            display: none;
-        }
-    
-        .Navigation.active {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            top: 140px;
-            right: 5px;
-        }
+    .PortraitContainer {
+        margin-right: 10px;
+        /* Reducir el margen entre la foto y los enlaces */
+        margin-bottom: 20px;
+        /* Agregar espacio entre la foto y los enlaces */
+    }
 
     .Navigation li {
         margin-right: 0;
-        margin-bottom: 10px;
+        margin-bottom: -40px;
     }
 
     .Navigation a {
@@ -464,6 +460,12 @@ button {
         /* Elimina el subrayado */
     }
 
+    /* Oculta la navegación extendida en dispositivos móviles */
+    .Navigation {
+        display: none;
+    }
+
+    /* Muestra solo la hamburguesa en dispositivos móviles */
     .menu-toggle {
         display: block;
         cursor: pointer;
@@ -513,5 +515,10 @@ button {
         /* Tamaño de iconos ajustado */
         margin-right: 10px;
         /* Espacio entre iconos reducido */
+    }
+
+    /* Centrar ProjectName en dispositivos móviles */
+    .ProjectName {
+        text-align: center;
     }
 }
