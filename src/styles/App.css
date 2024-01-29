@@ -126,73 +126,73 @@ body {
         /* Agregar espacio entre la foto y los enlaces */
     }
 
-        .Navigation {
-            position: absolute;
-            top: calc(100% + 10px);
-            left: 50%;
-            transform: translateX(-50%);
-            border-radius: 5px;
-            padding: 10px;
-            display: none;
-        }
+    .Navigation {
+        position: absolute;
+        top: calc(100% + 10px);
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 5px;
+        padding: 10px;
+        display: none;
+    }
 
-                .Navigation a {
-                    font-size: 16px;
-                    /* Tamaño de fuente para dispositivos móviles */
-                    color: white;
-                    text-decoration: none;
-                    transition: color 0.3s ease;
-                    /* Agrega transición de color */
-                    display: block;
-                    /* Cambia el comportamiento del enlace a bloque para que ocupe toda la anchura y se muestre en línea */
-                    margin-bottom: 10px;
-                    /* Espacio entre cada opción del menú */
-                }
-    
-        .Navigation li {
-            margin-right: 0;
-            margin-bottom: 10px;
-            /* Espacio entre cada opción del menú */
-        }
+    .Navigation a {
+        font-size: 16px;
+        /* Tamaño de fuente para dispositivos móviles */
+        color: white;
+        text-decoration: none;
+        transition: color 0.3s ease;
+        /* Agrega transición de color */
+        display: block;
+        /* Cambia el comportamiento del enlace a bloque para que ocupe toda la anchura y se muestre en línea */
+        margin-bottom: 10px;
+        /* Espacio entre cada opción del menú */
+    }
 
-        .Navigation.active {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            /* Centra verticalmente los elementos */
-            height: 100px;
-            /* Ajusta la altura automáticamente para adaptarse al contenido */
-            width: 100%;
-            /* Ajusta el ancho al 100% del contenedor */
-        }
+    .Navigation li {
+        margin-right: 0;
+        margin-bottom: 10px;
+        /* Espacio entre cada opción del menú */
+    }
 
-                .Navigation.active ul {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    background-color: rgba(0, 0, 0, 0.8);
-                    /* Cambia el color de fondo */
-                    padding: 20px;
-                    /* Añade espacio alrededor del contenido del menú */
-                }
-        
-                .Navigation.active li {
-                    margin-bottom: 10px;
-                }
-        
-                .Navigation.active a {
-                    font-size: 16px;
-                    /* Ajusta el tamaño del texto */
-                    color: white;
-                    /* Cambia el color del texto */
-                    text-decoration: none;
-                    /* Elimina el subrayado */
-                }
-                
-                                .Navigation.active a:hover {
-                                    color: #4CAF50;
-                                }
+    .Navigation.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /* Centra verticalmente los elementos */
+        height: 100px;
+        /* Ajusta la altura automáticamente para adaptarse al contenido */
+        width: 100%;
+        /* Ajusta el ancho al 100% del contenedor */
+    }
+
+    .Navigation.active ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.8);
+        /* Cambia el color de fondo */
+        padding: 20px;
+        /* Añade espacio alrededor del contenido del menú */
+    }
+
+    .Navigation.active li {
+        margin-bottom: 10px;
+    }
+
+    .Navigation.active a {
+        font-size: 16px;
+        /* Ajusta el tamaño del texto */
+        color: white;
+        /* Cambia el color del texto */
+        text-decoration: none;
+        /* Elimina el subrayado */
+    }
+
+    .Navigation.active a:hover {
+        color: #4CAF50;
+    }
 
     .menu-toggle {
         display: block;
@@ -211,7 +211,7 @@ body {
 }
 
 /* Estilos para escritorio */
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 768px) {
     .menu-toggle {
         display: none;
         /* Oculta la hamburguesa en pantallas más grandes */
@@ -256,7 +256,12 @@ body {
     }
 }
 
-@media screen and (min-width: 1600px) and (max-width: 2099px) {
+@media screen and (min-width: 1600px) {
+    .GridContainer {
+        flex-wrap: nowrap;
+        /* Evitar el wrap */
+    }
+
     .SkillGroup {
         width: calc(50% - 20px);
         margin-right: 20px;
@@ -264,14 +269,16 @@ body {
         border-radius: 8px;
         box-sizing: border-box;
         padding: 2rem;
-        margin-bottom: 20px; /* Ajusta el margen inferior */
+        margin-bottom: 20px;
+        /* Ajusta el margen inferior */
         text-align: center;
         max-width: 500px;
         /* Habilidades en dos columnas en pantallas de escritorio */
     }
 
     .SkillGroup:nth-child(even) {
-        margin-right: 0; /* Elimina el margen derecho del último elemento de cada fila */
+        margin-right: 0;
+        /* Elimina el margen derecho del último elemento de cada fila */
     }
 }
 
