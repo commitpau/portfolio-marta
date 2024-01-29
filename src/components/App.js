@@ -40,8 +40,9 @@ function App() {
       <div className="App">
         <header className="App-header">
           <div className="header-left">
-            <h1>Marta Belmonte</h1>
+            <h1>Marta Belmonte Andrés</h1>
             <h4>Full-Stack Developer</h4>
+            <h3>"Nunca es demasiado tarde para ser lo que podrías haber sido" – George Eliot</h3>
           </div>
           <MobileMenu isActive={menuActive} toggleMenu={toggleMenu} />
           <Navigation isActive={menuActive} />

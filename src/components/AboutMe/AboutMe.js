@@ -52,7 +52,7 @@ function AboutMe() {
           <button className="close-pdf" onClick={handleClosePdf}>
             Cerrar
           </button>
-          <iframe title="Marta_Belmonte_CV" src={cvPDF} width="100%" height="500px"></iframe>
+          <iframe title="Marta_Belmonte_CV" src={cvPDF}></iframe>
         </div>
       )}
     </section>

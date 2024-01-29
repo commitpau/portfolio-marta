@@ -25,6 +25,11 @@ body {
     background: rgb(49, 49, 49);
 }
 
+.header-left h3 {
+    font-style: italic;
+    font-size: 0.6em;
+}
+
 .Navigation {
     display: flex;
     align-items: center;
@@ -119,22 +124,6 @@ body {
         /* Agregar espacio entre la foto y los enlaces */
     }
 
-    .Navigation {
-        flex-direction: column;
-        align-items: flex-end;
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        background: rgba(0, 0, 0, 0.8);
-        border-radius: 10px;
-        padding: 10px;
-        display: none;
-    }
-
-    .Navigation.active {
-        display: flex;
-    }
-
     .Navigation li {
         margin-right: 0;
         margin-bottom: 10px;
@@ -155,6 +144,7 @@ body {
         background: none;
         border: none;
     }
+
 }
 
 /* Estilos para escritorio */
@@ -215,18 +205,39 @@ body {
     margin-top: 20px;
 }
 
-.download-cv,
-.show-pdf {
-    margin-right: 10px;
+.pdf-viewer {
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
+.pdf-viewer iframe {
+    width: 100%;
+    height: 1000px;
+}
+
+.close-pdf,
+.pdf-embedded {
+    margin: 10px;
+}
+
+.download-cv,
+.show-pdf {
+    margin-right: 40px;
+}
+
+.Projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .Project {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    /* Cambia la dirección del flexbox a columna */
     align-items: center;
-    flex-wrap: wrap;
-    /* Para permitir que los elementos se ajusten en una fila */
+    /* Centra los elementos horizontalmente */
     margin-bottom: 10px;
     background-color: #ffcc00;
     border: 2px solid #ff6699;
@@ -237,42 +248,13 @@ body {
     cursor: pointer;
     opacity: 0.8;
     text-align: center;
+    width: 700px;
 }
 
+.Project h4,
+.Project button,
 .Project img {
-    max-width: 200px;
-    height: auto;
     margin-bottom: 10px;
-}
-
-.ProjectsContainer {
-    padding: 2rem;
-    margin: 0 auto;
-    text-align: center;
-    max-width: 900px;
-}
-
-.Project:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.2);
-}
-
-.Project h3 {
-    color: #333;
-    margin-bottom: 10px;
-    font-size: 1.5em;
-    font-weight: bold;
-}
-
-.Project button {
-    color: white;
-    background-color: #ff6699;
-    border: none;
-    padding: 10px 20px;
-}
-
-.Project button:hover {
-    background-color: #ff3366;
 }
 
 .miniatura-pequenita {
@@ -308,6 +290,10 @@ button {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+}
+
+.Project button:hover {
+    background-color: #ff3366;
 }
 
 /* Animación de entrada para los proyectos */
@@ -448,21 +434,23 @@ button {
             margin-right: 5px;
     }
 
-    .Navigation {
-        flex-direction: column;
-        align-items: flex-end;
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        background: rgba(0, 0, 0, 0.8);
-        border-radius: 10px;
-        padding: 10px;
-        display: none;
-    }
-
-    .Navigation.active {
-        display: flex;
-    }
+        .Navigation {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            padding: 10px;
+            display: none;
+        }
+    
+        .Navigation.active {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            top: 140px;
+            right: 5px;
+        }
 
     .Navigation li {
         margin-right: 0;
