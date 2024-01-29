@@ -222,12 +222,12 @@ body {
         /* Muestra la navegación extendida en pantallas más grandes */
     }
 
-    .GridContainer {
-        gap: 10px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
+        .GridContainer {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            /* Dos columnas */
+            gap: 20px;
+        }
 
     .SkillsContainer {
         padding: 40px;
@@ -256,29 +256,10 @@ body {
     }
 }
 
-@media screen and (min-width: 1600px) {
-    .GridContainer {
-        flex-wrap: nowrap;
-        /* Evitar el wrap */
-    }
-
+@media screen and (min-width: 1599px) {
     .SkillGroup {
-        width: calc(50% - 20px);
-        margin-right: 20px;
-        border: 2px solid #ddd;
-        border-radius: 8px;
-        box-sizing: border-box;
-        padding: 2rem;
-        margin-bottom: 20px;
-        /* Ajusta el margen inferior */
-        text-align: center;
-        max-width: 500px;
-        /* Habilidades en dos columnas en pantallas de escritorio */
-    }
-
-    .SkillGroup:nth-child(even) {
-        margin-right: 0;
-        /* Elimina el margen derecho del último elemento de cada fila */
+        max-width: calc(50% - 20px);
+        /* Ancho máximo para asegurar que quepan dos elementos en una fila */
     }
 }
 
