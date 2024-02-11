@@ -3,10 +3,10 @@ import '../../styles/App.css';
 import mini_ab from '../../Images/mini_ab.png';
 import mini_anpx from '../../Images/mini_anpx.png';
 import mini_ap from '../../Images/mini_ap.png';
-import mini_ff from '../../Images/mini_ff.png';
+import mini_rm from '../../Images/mini_rm.png';
 import mini_pm from '../../Images/mini_pm.png';
 import mini_wd from '../../Images/mini_wd.png';
-
+import mini_ja from '../../Images/mini_ja.png';
 
 
 const proyectos = [
@@ -20,12 +20,12 @@ const proyectos = [
         miniatura: mini_pm
       },
       {
-        nombre: "Encuentra las frases de Friends",
-        url: "https://beta.adalab.es/modulo-3-evaluacion-intermedia-MartaBelmonte/",
-        miniatura: mini_ff
+        nombre: "Rick and Morty Characters",
+        url: "https://beta.adalab.es/modulo-3-evaluacion-final-MartaBelmonte/",
+        miniatura: mini_rm
       },
       {
-        nombre: "Antiguedades Belmonte",
+        nombre: "Antigüedades Belmonte",
         url: "https://project-antiguedades.vercel.app/",
         miniatura: mini_ab
       }
@@ -44,6 +44,11 @@ const proyectos = [
         nombre: "Crear tarjetas de visita",
         url: "https://beta.adalab.es/project-promo-t-module-2-team-2/",
         miniatura: mini_ap 
+      },
+      {
+        nombre: "Juego de apuestas",
+        url: "http://beta.adalab.es/modulo-2-evaluacion-intermedia-MartaBelmonte/",
+        miniatura: mini_ja 
       }
     ]
   },
