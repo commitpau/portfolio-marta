@@ -14,20 +14,18 @@ body {
 
 .App-header {
     display: flex;
+    flex-direction: column;
+    /* Alinea los elementos verticalmente */
     align-items: center;
+    /* Alinea los elementos al centro horizontalmente */
     justify-content: space-between;
+    /* Distribuye el espacio verticalmente */
     padding: 20px;
-    height: 300px;
     border-radius: 0 0 10px 10px;
     z-index: 1;
     color: white;
     font-size: 25px;
-    background: rgb(49, 49, 49);
-}
-
-.header-left h3 {
-    font-style: italic;
-    font-size: 0.6em;
+    background: rgb(84, 84, 84);
 }
 
 .Navigation {
@@ -36,10 +34,7 @@ body {
 }
 
 .Navigation ul {
-    list-style: none;
     display: flex;
-    margin: 0;
-    padding: 0;
 }
 
 .Navigation li {
@@ -49,6 +44,7 @@ body {
     border-radius: 5px;
     transition: all 0.3s ease;
     cursor: pointer;
+    border: 2px solid black;
 }
 
 .Navigation li:hover {
@@ -73,11 +69,6 @@ body {
         font-size: 16px;
         position: relative;
         /* Agrega posición relativa para los elementos posicionados de forma absoluta */
-    }
-
-    .header-left {
-        margin-left: 0;
-        text-align: center;
     }
 
     .GridContainer {
@@ -117,13 +108,6 @@ body {
     .Portrait {
         width: 70%;
         /* Reducir el ancho de la foto al 70% */
-    }
-
-    .PortraitContainer {
-        margin-right: 10px;
-        /* Reducir el margen entre la foto y los enlaces */
-        margin-bottom: 20px;
-        /* Agregar espacio entre la foto y los enlaces */
     }
 
     .Navigation {
@@ -337,8 +321,7 @@ h2 {
 
 h3 {
     color: #4CAF50;
-    font-size: 1.5em;
-    text-align: center;
+    font-size: 0.6em;
 }
 
 ul {
@@ -379,14 +362,8 @@ button {
 
 /* Estilos para el Contenedor del Retrato */
 .PortraitContainer {
-    border-radius: 50%;
-    overflow: hidden;
-    width: 400px;
+    width: 370px;
     /* Ajusta el tamaño según sea necesario */
-    height: 420px;
-    /* Ajusta el tamaño según sea necesario */
-    margin-right: 20px;
-    /* Espaciado entre la imagen y los enlaces */
 }
 
 /* Estilos para la Información de Contacto */

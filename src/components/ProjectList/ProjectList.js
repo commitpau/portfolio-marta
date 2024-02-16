@@ -7,6 +7,7 @@ import mini_rm from '../../Images/mini_rm.png';
 import mini_pm from '../../Images/mini_pm.png';
 import mini_wd from '../../Images/mini_wd.png';
 import mini_ja from '../../Images/mini_ja.png';
+import mini_ct from '../../Images/mini_ct.png';
 
 
 const proyectos = [
@@ -33,6 +34,17 @@ const proyectos = [
   },
   {
     id: 2,
+    nombre: "Proyectos con Vue & Laravel",
+    urls: [
+      {
+        nombre: "Calendario de tareas",
+        url: "https://calendario-tareas.vercel.app/",
+        miniatura: mini_ct
+      }
+    ]
+  },
+  {
+    id: 3,
     nombre: "Proyectos con JavaScript",
     urls: [
       {
@@ -53,7 +65,7 @@ const proyectos = [
     ]
   },
   {
-    id: 3,
+    id: 4,
     nombre: "Proyecto con HTML, CSS, SASS",
     urls: [
       {

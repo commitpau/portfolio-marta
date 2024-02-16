@@ -36,26 +36,24 @@ function App() {
 };
 
   return (
-    <Router>
-      <div className="App">
-        <header className="App-header">
-          <div className="header-left">
-            <h1>Marta Belmonte Andrés</h1>
-            <h4>Full-Stack Developer</h4>
-            <h3>"Nunca es demasiado tarde para ser lo que podrías haber sido" – George Eliot</h3>
-          </div>
-          <MobileMenu isActive={menuActive} toggleMenu={toggleMenu} />
-          <Navigation isActive={menuActive} />
-        </header>
-        <Routes>
-          <Route path="/" element={<React.Fragment><AboutMe /><Skills /><ProjectList /><Contact /></React.Fragment>} />
-          <Route path="/skills" element={<Skills />} />
-          <Route path="/projects" element={<ProjectList />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      </div>
-    </Router>
-  );
+  <Router>
+    <div className="App">
+      <header className="App-header">
+        <h1>Marta Belmonte Andrés</h1>
+        <h4>Full-Stack Developer</h4>
+        <MobileMenu isActive={menuActive} toggleMenu={toggleMenu} />
+        <h3>"Nunca es demasiado tarde para ser lo que podrías haber sido" – George Eliot</h3>
+        <Navigation isActive={menuActive} />
+      </header>
+      <Routes>
+        <Route path="/" element={<React.Fragment><AboutMe /><Skills /><ProjectList /><Contact /></React.Fragment>} />
+        <Route path="/skills" element={<Skills />} />
+        <Route path="/projects" element={<ProjectList />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </div>
+  </Router>
+);
 }
 
 export default App;
