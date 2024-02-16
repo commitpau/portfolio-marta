@@ -427,14 +427,12 @@ button {
         padding: 10px;
     }
 
-    .App-header {
-        height: 150px;
-        font-size: 16px;
+    h1 {
+        margin-bottom: -10px;
     }
 
-    .header-left {
-        margin-left: 0;
-        text-align: center;
+    h3 {
+        margin-top: -10px;
     }
 
     .GridContainer {
