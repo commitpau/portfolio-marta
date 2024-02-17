@@ -42,7 +42,7 @@ function App() {
         <h1>Marta Belmonte Andrés</h1>
         <h4>Full-Stack Developer</h4>
         <MobileMenu isActive={menuActive} toggleMenu={toggleMenu} />
-        <h3>"Nunca es demasiado tarde para ser lo que podrías haber sido" – George Eliot</h3>
+        <h3 className="h3-author">"Nunca es demasiado tarde para ser lo que podrías haber sido" – George Eliot</h3>
         <Navigation isActive={menuActive} />
       </header>
       <Routes>
