@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -23,7 +23,7 @@ body {
     padding: 20px;
     border-radius: 0 0 10px 10px;
     z-index: 1;
-    color: white;
+    color: #00FF00;
     font-size: 25px;
     background: rgb(84, 84, 84);
 }
@@ -89,12 +89,11 @@ body {
 
     .SkillGroup {
         border: 1px solid #ddd;
-        /* Borde gris suave alrededor de cada habilidad */
         border-radius: 5px;
         margin-bottom: 10px;
         padding: 10px;
         width: calc(100% - 20px);
-        /* Habilidades en columna en dispositivos móviles */
+        background-color: #f0efef;
         box-sizing: border-box;
     }
 
@@ -107,8 +106,7 @@ body {
     }
 
     .Portrait {
-        width: 70%;
-        /* Reducir el ancho de la foto al 70% */
+        border-radius: 10%;
     }
 
     .Navigation {
@@ -156,7 +154,6 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color: rgba(0, 0, 0, 0.8);
         /* Cambia el color de fondo */
         padding: 20px;
         /* Añade espacio alrededor del contenido del menú */
@@ -164,10 +161,11 @@ body {
 
     .Navigation.active li {
         margin-bottom: 10px;
+        background-color: rgba(36, 36, 36, 0.8);
     }
 
     .Navigation.active a {
-        font-size: 16px;
+        font-size: 18px;
         /* Ajusta el tamaño del texto */
         color: white;
         /* Cambia el color del texto */
@@ -199,7 +197,6 @@ body {
 @media screen and (min-width: 768px) {
     .menu-toggle {
         display: none;
-        /* Oculta la hamburguesa en pantallas más grandes */
     }
 
     .Navigation {
@@ -227,6 +224,7 @@ body {
         padding: 2rem;
         text-align: center;
         max-width: 500px;
+        background-color: #f0efef;
     }
 
     .SkillGroup:nth-child(odd) {
@@ -437,11 +435,13 @@ button {
     }
 
     h1 {
-        margin-bottom: -10px;
+        font-size: 25px;
+        margin-top: 40px;
     }
 
     .h3-author {
-        margin-top: -10px;
+        font-size: 12px;
+        margin-top: -15px;
     }
 
     .GridContainer {
@@ -460,13 +460,11 @@ button {
     }
 
     .SkillGroup {
-        border: 1px solid #ddd;
-        /* Borde gris suave alrededor de cada habilidad */
+        border: 2px solid #ddd;
         border-radius: 5px;
         margin-bottom: 10px;
         padding: 10px;
         width: calc(100% - 20px);
-        /* Habilidades en columna en dispositivos móviles */
         box-sizing: border-box;
     }
 
@@ -499,7 +497,9 @@ button {
         font-size: 16px;
         color: white;
         text-decoration: none;
-        /* Elimina el subrayado */
+        display: flex;
+        align-items: center;
+        height: 100%;
     }
 
     .AboutMeButtons {
@@ -509,6 +509,13 @@ button {
     /* Oculta la navegación extendida en dispositivos móviles */
     .Navigation {
         display: none;
+        position: absolute;
+            top: calc(100% + 70px);
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 5px;
+            padding: 10px;
+            display: none;
     }
 
     /* Muestra solo la hamburguesa en dispositivos móviles */
@@ -516,9 +523,9 @@ button {
         display: block;
         cursor: pointer;
         color: white;
-        font-size: 20px;
+        font-size: 30px;
         background: none;
-        border: none;
+        border: none; 
     }
 
     /* Modificaciones para la información de contacto */
@@ -568,4 +575,5 @@ button {
         text-align: center;
         margin-top: 10px;
     }
+
 }
