@@ -13,12 +13,28 @@ tags:
 
 [![Descripción de la imagen](/assets/mini_ap.png)](https://beta.adalab.es/project-promo-t-module-2-team-2/)
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur posuere commodo venenatis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam non ligula vel metus efficitur hendrerit. In hac habitasse platea dictumst. Praesent et mauris ut mi dapibus semper. Curabitur tortor justo, efficitur sit amet pretium cursus, porta eget odio. Cras ac venenatis dolor. Donec laoreet posuere malesuada. Curabitur nec mi tempor, placerat leo sit amet, tincidunt est. Quisque pellentesque venenatis magna, eget tristique nibh pulvinar in. Vestibulum vitae volutpat arcu. Aenean ut malesuada odio, sit amet pellentesque odio. Suspendisse nunc elit, blandit nec hendrerit non, aliquet at magna. Donec id leo ut nulla sagittis sodales.
+##### Description:
+This project is a website designed for users to create their own business cards, simulating the experience of entering the virtual reality of Animal Crossing. Users have the freedom to choose from a variety of characters and color palettes inspired by the game. The preview of the business card is displayed in real-time on the right side of the screen, allowing users to see changes as they design their card.
 
-Integer vitae nibh elit. Suspendisse eget urna eu neque bibendum pharetra. Sed interdum lectus sem, in pulvinar magna dignissim vel. Quisque maximus at urna nec laoreet. Suspendisse potenti. Vestibulum rhoncus sem ut mi pellentesque, in vestibulum erat blandit. Aliquam sodales dui ac maximus consectetur. Duis quis est vehicula, imperdiet nisl nec, fermentum erat. Duis tortor diam, pharetra eu euismod in, vehicula non eros. Curabitur facilisis dui at erat ultrices gravida. In at nunc ultricies, pulvinar mi vel, sagittis mauris. Praesent pharetra posuere purus ac imperdiet. Nulla facilisi.
+#### Key Features:
+##### Selection of Animal Crossing Characters: 
+Users can choose from a selection of iconic Animal Crossing characters to represent them on their business card. This feature adds a personalization touch and familiarity with the game
 
-Sed pulvinar porttitor mi in ultricies. Etiam non dolor gravida eros pulvinar pellentesque et dictum ex. Proin eu ornare ligula, sed condimentum dui. Vivamus tincidunt tellus mi, sed semper ipsum pharetra a. Suspendisse sollicitudin at sapien nec volutpat. Etiam justo urna, laoreet ac lacus sed, ultricies facilisis dolor. Integer posuere, metus vel viverra gravida, risus elit ornare magna, id feugiat erat risus ullamcorper libero. Proin vitae diam auctor, laoreet lorem vitae, varius tellus.
+##### Animal Crossing-Inspired Color Palettes: 
+Color palettes inspired by the distinctive visual style of Animal Crossing are provided. Users can select color combinations that reflect their style and personal preferences
 
-Mauris sed eros in ex maximus volutpat. Suspendisse potenti. Donec lacinia justo consectetur sagittis tempor. Proin ullamcorper nisi vitae auctor rhoncus. Sed tristique aliquam augue. Pellentesque vitae fringilla ligula. Nulla arcu elit, efficitur eu nunc malesuada, eleifend tincidunt orci. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer mattis orci in bibendum ultricies. Quisque a dui erat. Phasellus et vulputate ipsum. Proin metus ex, lobortis nec ornare eget, bibendum ut sapien. Aliquam in dolor lobortis, aliquam tellus a, congue augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+##### Customization of Business Card: 
+Users can customize all aspects of their business card, including design, text, and layout. They can add contact information such as name, title, email address, and phone number
 
-Aenean pretium purus augue, ut bibendum erat convallis quis. Cras condimentum quis velit ac mollis. Suspendisse non purus fringilla, venenatis nisl porta, finibus odio. Curabitur aliquet metus faucibus libero interdum euismod. Morbi sed magna nisl. Morbi odio nibh, facilisis vel sapien eu, tempus tincidunt erat. Nullam erat velit, sagittis at purus quis, tristique scelerisque tortor. Pellentesque lacinia tortor id est aliquam viverra. Vestibulum et diam ac ipsum mollis fringilla.
+##### Real-Time Preview: 
+As users make changes to the design of their business card, the preview is updated in real-time on the right side of the screen. This allows users to see how the final card will look before printing or sharing it
+
+#### Technologies Used:
+HTML5, CSS3, and JavaScript for creating the interactive user interface and manipulating the DOM.
+
+#### Project Objectives:
+Provide users with a fun and personalized experience creating their own Animal Crossing-inspired business cards.
+
+Demonstrate skills in designing interactive user interfaces and dynamically manipulating HTML elements using JavaScript.
+
+Foster creativity and personal expression by allowing users to customize all aspects of their business card.
