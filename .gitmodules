@@ -1,0 +1,6 @@
+[submodule "Desktop/proyectos personales/portfolio nuevo/.nvm"]
+	path = Desktop/proyectos personales/portfolio nuevo/.nvm
+	url = https://github.com/commitpau/portfolio-marta
+[submodule "Desktop/proyectos personales/portfolio nuevo/submodules/portfolio-marta"]
+	path = Desktop/proyectos personales/portfolio nuevo/submodules/portfolio-marta
+	url = https://github.com/commitpau/portfolio-marta
