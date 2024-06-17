@@ -1,0 +1,157 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+import ContactCTA from '../components/ContactCTA.astro';
+import Hero from '../components/Hero.astro';
+---
+
+<BaseLayout title="About | Marta Belmonte" description="About Marta Belmonte">
+	<div class="stack gap-20">
+		<main class="wrapper about">
+			<Hero
+				title="About"
+				tagline="Thanks for stopping by. Read below to learn more about myself and my background."
+			>
+				<img
+					width="1553"
+					height="873"
+					src="/assets/foto_perfil.jpeg"
+					alt="Another picture of Marta Belmonte "
+				/>
+			</Hero>
+
+			<section>
+				<h2 class="section-title">Background</h2>
+				<div class="content">
+					<p>
+						Hello everyone! 🚀 My name is Marta and I hold a Bachelor's Degree in Labor Relations from the Autonomous University of Barcelona, and I'm also a 💻 Web Developer! ⚡️ A force of nature.
+					</p>
+					<p>
+						I'm excited to blend my skills in both areas. I've gained solid knowledge in various programming languages and enjoy tackling technical challenges.
+					</p>
+					<p>
+						Throughout my education, I've learned a great deal and had the chance to meet inspiring professionals. I'm proud of my achievements so far and thrilled about the new opportunities in the world of web development.
+					</p>
+					<p>I'm open to job offers in this field and ready to contribute my passion and skills. I look forward to continuing to grow and take on new challenges!
+					</p>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Education</h2>
+				<div class="content">
+					<h5>Adalab</h5>
+					<p class="company">Frontend Junior Developer</p>
+					<p class="subtitle">Apr. 2023 - Jul. 2023 · 4 months</p>
+					<p>Intensive course in web programming based on the most important technologies both in Frontend and Backend, carrying out both theoretical and practical parts with projects:</p>
+					<p>Layout: HTML5, CSS3, Flexbox, CSS Grid, SASS, Bootstrap.</p>
+					<p>Handling Slack, GitHub, VS Code, Gulp, Terminal, Linter, Zeplin.</p>
+					<p>JavaScript (ES6) and third-party web services (APIs). Version control with Git.</p>
+					<p>React JS: Creation of SPAs with React combining previous knowledge.</p>
+					<p>Knowledge of APIs and back-end programming: applications with Node JS, Express, and SQL.</p>
+				</div>
+				<div class="content">
+					<h5>Institut Moianès</h5>
+					<p class="company">Administrative</p>
+					<p class="subtitle">Nov. 2022 - May 2023 · 7 months</p>
+					<p class="subtitle">Moià, Catalonia, Spain</p>
+					<p>Administrative management of student pre-registration and enrollment processes, academic documents: school records, academic transcripts, scholarships, certificates,...
+					Filing and sorting of documents at the center, handling correspondence, transcription of documents, computerized data management, telephone and in-person assistance, reception and communication of notices, material ordering, verification of delivery notes, etc.
+					Esfer@, SAGA, RALC, GEDAC</p>
+				</div>
+				<div class="content">
+					<h5>Fundació Ampans</h5>
+					<p class="subtitle">Receptionist Residència Julio Payàs</p>
+					<p class="subtitle">11 months</p>
+					<p class="subtitle">Temporary contract</p>
+					<p class="subtitle">Aug. 2022 - Sept. 2022 · 2 months</p>
+					<p>Telephone and personal attention, absenteeism control, organization of visit schedules, database management, updating resident reports, administrative tasks specific to the position,…</p>
+				</div>
+				<div class="content">
+					<p class="subtitle">Administrative Assistant Social Work</p>
+					<p class="subtitle">Contract for specific work or service</p>
+					<p class="subtitle">May 2022 - Jul. 2022 · 3 months</p>
+					<p>Management of school grants in the Social Work department of Jeroni de Moragas School, telephone attention, data management, and specific administrative tasks.</p>
+				</div>
+				<div class="content">
+					<p class="subtitle">Human Resources Technician</p>
+					<p class="subtitle">Training contract</p>
+					<p class="subtitle">Nov. 2021 - May 2022 · 7 months</p>
+					<p class="subtitle">Santpedor, Catalonia, Spain</p>
+					<p>Support in coordination and organization of training and development actions, procedures for bonuses with Fundae, participation in the creation and design of the Training Campus. Coordination and reception with volunteer staff. Selection process, curriculum screening, monitoring, and publication of offers on the website, DLT’s,…</p>
+				</div>
+				<div class="content">
+					<h5>Pandrol</h5>
+					<p class="subtitle">Human Resources Department</p>
+					<p class="subtitle">Oct. 2020 - Jan. 2021 · 4 months</p>
+					<p class="subtitle">Castellgalí, Catalonia, Spain</p>
+					<p>Monitoring of hires and dismissals, coordination with the Human Resources department of France and external service provider, monthly attendance reports and payroll control, design of personnel selection processes, reports on positive discrimination, work schedules, equality policy,...</p>
+				</div>
+			</section>
+		</main>
+
+		<ContactCTA />
+	</div>
+</BaseLayout>
+
+<style>
+	.about {
+		display: flex;
+		flex-direction: column;
+		gap: 3.5rem;
+	}
+
+	.subtitle{
+    font-weight: bold;
+	}
+
+	img {
+		margin-top: 1.5rem;
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-md);
+	}
+
+	section {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+		color: var(--gray-200);
+	}
+
+	.section-title {
+		grid-column-start: 1;
+		font-size: var(--text-xl);
+		color: var(--gray-0);
+		text-align: center;
+	}
+
+	.content {
+		grid-column: 2 / 4;
+	}
+
+	.content :global(a) {
+		text-decoration: 1px solid underline transparent;
+		text-underline-offset: 0.25em;
+		transition: text-decoration-color var(--theme-transition);
+	}
+
+	.content :global(a:hover),
+	.content :global(a:focus) {
+		text-decoration-color: currentColor;
+	}
+
+	@media (min-width: 50em) {
+		.about {
+			display: grid;
+			grid-template-columns: 1fr 60% 1fr;
+		}
+
+		.about > :global(:first-child) {
+			grid-column-start: 2;
+		}
+
+		section {
+			display: contents;
+			font-size: var(--text-lg);
+		}
+	}
+</style>
